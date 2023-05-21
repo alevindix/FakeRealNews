@@ -1,4 +1,4 @@
-cd FakeRealNews
+cd PySpark
 
 #STOP HADOOP
 sh script/stopHadoop.sh
