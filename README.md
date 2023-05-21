@@ -7,7 +7,7 @@ A system that estimates the truthfulness of a news using Apache Hadoop, PySpark 
   - Tokenization
   - Stop words
   - Bag of words
-  - Vectorization (?)
+  - Count Vectorizer
   - IDF
  - Train a Naive Bayes classifier
  - Accuracy of the model is 0.92
