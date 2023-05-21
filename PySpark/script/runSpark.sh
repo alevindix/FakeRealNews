@@ -1,5 +1,5 @@
 
-MY_PTH="/home/bigdata2022/FakeRealNews"
+MY_PTH="/home/bigdata2022/FakeRealNews/PySpark"
 
 rm -r $MY_PTH/output
 
