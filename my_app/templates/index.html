@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+    font-size: 60px;
+    font-family: "Courier New", monospace;
+    }
+label,textarea{
+  display:flex;
+  flex-direction:column;
+}
+label{
+   font-size: 40px;
+   font-family: "Courier New", monospace;
+    margin-bottom: 20px;
+}
+textarea {
+  width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+
+button{
+  background-color: white; 
+  border: 3px solid #FA8072;
+  color: black;
+  padding: 30px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FA8072;
+  color: white;
+}
+
+p{
+font-size: 25px;
+   font-family: "Courier New", monospace;
+}
+
+</style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Fake Real News App</h1>
+  <form>
+    <label for="input_data">Insert a news</label>
+    <textarea id="input_data"></textarea>
+    
+    <br>
+    <button id="submit_btn" type="button">Process the news</button>
+  </form>
+  <br>
+  <div><p id="output"></p></div>
+
+  <script>
+    // define a click event handler for the submit button
+    $("#submit_btn").click(function() {
+    	$("#output").text("");
+      // get the input data from the textarea
+      var input_data = $("#input_data").val();
+      // send a POST request to the Flask app using AJAX
+      $.ajax({
+        type: "POST",
+        url: "/process_input",
+        contentType: "application/json",
+        data: JSON.stringify({ "input_data": input_data }),
+        success: function(response) {
+          // display the processed data in the output div
+          let string = "'";
+          let text = string+input_data+response;
+          $("#output").text(text);
+          $('#input_data').val('');
+        },
+        error: function(error) {
+          // display an error message if the request fails
+          $("#output").text("Error processing input");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
