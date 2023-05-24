@@ -3,7 +3,7 @@ A system that estimates the truthfulness of a news using Apache Hadoop, PySpark 
 ## Dataflow
 ### Model Training
 - Import on HDFS the [fake real news dataset](https://www.kaggle.com/datasets/bjoernjostein/fake-news-data-set)
-- Develope an input transformation pipeline that execute the following tasks:
+- Develop an input transformation pipeline that execute the following tasks:
   - Tokenizer
   - Stop words
   - Bag of words
