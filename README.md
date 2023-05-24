@@ -15,7 +15,7 @@ A system that estimates the truthfulness of a news using Apache Hadoop, PySpark 
  ### Flask Web Application
  Created to enter the news, process it and show the output.
  - Load model from HDFS
- - Inser news on user interface
+ - Insert news on user interface
  - Get input with an AJAX request
  - Process input running transformation pipeline
  - Compute prediction and send it with a AJAX response
