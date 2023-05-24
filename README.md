@@ -1,4 +1,4 @@
-# FakeRealNews
+# Fake/Real News Prediction
 A system that estimates the truthfulness of a news using Apache Hadoop, PySpark and Flask.
 ## Dataflow
 ### Model Training
