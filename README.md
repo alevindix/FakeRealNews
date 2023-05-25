@@ -13,7 +13,7 @@ A system that estimates the truthfulness of a news using Apache Hadoop, PySpark 
  - Accuracy of the model is 0.92
  - Save the model and the transformation pipeline on HDFS
  ### Flask Web Application
- Created to enter the news, process it and show the output.
+ Created to insert a news, process it and show the output.
  - Load model from HDFS
  - Insert news on user interface
  - Get input with an AJAX request
