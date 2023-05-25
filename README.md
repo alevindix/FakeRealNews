@@ -6,7 +6,6 @@ A system that estimates the truthfulness of a news using Apache Hadoop, PySpark 
 - Develop an input transformation pipeline that execute the following tasks:
   - Tokenizer
   - Stop word
-  - Bag of words
   - Count Vectorizer
   - IDF
  - Train a Naive Bayes classifier
