@@ -17,7 +17,7 @@ A system that estimates the truthfulness of a news using Apache Hadoop, PySpark 
  - Load model and input transformation pipeline from HDFS
  - Insert news on user interface
  - Get input with an AJAX request
- - Process input running the transformation pipeline
+ - Process input by running the transformation pipeline
  - Compute prediction and send it with a AJAX response
  - Show the result on user interface
 ## Usage
