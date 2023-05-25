@@ -9,16 +9,10 @@ from pyspark.sql import SparkSession
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 from pyspark.ml.feature import Tokenizer, StopWordsRemover, CountVectorizer, IDF, CountVectorizerModel, IDFModel
 
-# SparkSession is now the entry point of Spark
-# SparkSession can also be construed as gateway to spark libraries
-# create instance of spark class
-
 sparkConf = SparkConf()
 sparkConf.setAppName('FakeRealNews')
 spark = SparkSession.builder.config(conf=sparkConf).getOrCreate()
 sc = spark.sparkContext
-
-# create spark dataframe of input csv file
 
 path = 'hdfs://localhost:9000/user/bigdata2022/input'
 df = spark.read.csv(path + '/df.csv', inferSchema=True, header=True, escape='"', multiLine=True)
