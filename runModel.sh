@@ -1,3 +1,4 @@
+cd FakeRealNews
 cd PySpark
 
 #STOP HADOOP
